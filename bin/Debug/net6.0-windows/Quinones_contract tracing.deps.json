@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Quinones_contract tracing/1.0.0": {
+        "runtime": {
+          "Quinones_contract tracing.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Quinones_contract tracing/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,17 @@
+C:\Users\Ej Quinones\Documents\2ND SEMESTTER\OBJECT- ORIENTED PROGRAMMING\Quinones_contract tracing\obj\Debug\net6.0-windows\Quinones_contract tracing.csproj.AssemblyReference.cache
+C:\Users\Ej Quinones\Documents\2ND SEMESTTER\OBJECT- ORIENTED PROGRAMMING\Quinones_contract tracing\obj\Debug\net6.0-windows\Quinones_contract_tracing.Form1.resources
+C:\Users\Ej Quinones\Documents\2ND SEMESTTER\OBJECT- ORIENTED PROGRAMMING\Quinones_contract tracing\obj\Debug\net6.0-windows\Quinones_contract tracing.csproj.GenerateResource.cache
+C:\Users\Ej Quinones\Documents\2ND SEMESTTER\OBJECT- ORIENTED PROGRAMMING\Quinones_contract tracing\obj\Debug\net6.0-windows\Quinones_contract tracing.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ej Quinones\Documents\2ND SEMESTTER\OBJECT- ORIENTED PROGRAMMING\Quinones_contract tracing\obj\Debug\net6.0-windows\Quinones_contract tracing.AssemblyInfoInputs.cache
+C:\Users\Ej Quinones\Documents\2ND SEMESTTER\OBJECT- ORIENTED PROGRAMMING\Quinones_contract tracing\obj\Debug\net6.0-windows\Quinones_contract tracing.AssemblyInfo.cs
+C:\Users\Ej Quinones\Documents\2ND SEMESTTER\OBJECT- ORIENTED PROGRAMMING\Quinones_contract tracing\obj\Debug\net6.0-windows\Quinones_contract tracing.csproj.CoreCompileInputs.cache
+C:\Users\Ej Quinones\Documents\2ND SEMESTTER\OBJECT- ORIENTED PROGRAMMING\Quinones_contract tracing\bin\Debug\net6.0-windows\Quinones_contract tracing.exe
+C:\Users\Ej Quinones\Documents\2ND SEMESTTER\OBJECT- ORIENTED PROGRAMMING\Quinones_contract tracing\bin\Debug\net6.0-windows\Quinones_contract tracing.deps.json
+C:\Users\Ej Quinones\Documents\2ND SEMESTTER\OBJECT- ORIENTED PROGRAMMING\Quinones_contract tracing\bin\Debug\net6.0-windows\Quinones_contract tracing.runtimeconfig.json
+C:\Users\Ej Quinones\Documents\2ND SEMESTTER\OBJECT- ORIENTED PROGRAMMING\Quinones_contract tracing\bin\Debug\net6.0-windows\Quinones_contract tracing.dll
+C:\Users\Ej Quinones\Documents\2ND SEMESTTER\OBJECT- ORIENTED PROGRAMMING\Quinones_contract tracing\bin\Debug\net6.0-windows\Quinones_contract tracing.pdb
+C:\Users\Ej Quinones\Documents\2ND SEMESTTER\OBJECT- ORIENTED PROGRAMMING\Quinones_contract tracing\obj\Debug\net6.0-windows\Quinones_contract tracing.dll
+C:\Users\Ej Quinones\Documents\2ND SEMESTTER\OBJECT- ORIENTED PROGRAMMING\Quinones_contract tracing\obj\Debug\net6.0-windows\refint\Quinones_contract tracing.dll
+C:\Users\Ej Quinones\Documents\2ND SEMESTTER\OBJECT- ORIENTED PROGRAMMING\Quinones_contract tracing\obj\Debug\net6.0-windows\Quinones_contract tracing.pdb
+C:\Users\Ej Quinones\Documents\2ND SEMESTTER\OBJECT- ORIENTED PROGRAMMING\Quinones_contract tracing\obj\Debug\net6.0-windows\Quinones_contract tracing.genruntimeconfig.cache
+C:\Users\Ej Quinones\Documents\2ND SEMESTTER\OBJECT- ORIENTED PROGRAMMING\Quinones_contract tracing\obj\Debug\net6.0-windows\ref\Quinones_contract tracing.dll
