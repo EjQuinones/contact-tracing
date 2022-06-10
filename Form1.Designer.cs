@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.NameTextbox = new System.Windows.Forms.TextBox();
             this.GenderTextbox = new System.Windows.Forms.TextBox();
@@ -72,28 +73,28 @@
             // 
             // GenderTextbox
             // 
-            this.GenderTextbox.Location = new System.Drawing.Point(112, 148);
+            this.GenderTextbox.Location = new System.Drawing.Point(112, 127);
             this.GenderTextbox.Name = "GenderTextbox";
             this.GenderTextbox.Size = new System.Drawing.Size(100, 23);
             this.GenderTextbox.TabIndex = 8;
             // 
             // AgeTextbox
             // 
-            this.AgeTextbox.Location = new System.Drawing.Point(312, 148);
+            this.AgeTextbox.Location = new System.Drawing.Point(312, 128);
             this.AgeTextbox.Name = "AgeTextbox";
             this.AgeTextbox.Size = new System.Drawing.Size(100, 23);
             this.AgeTextbox.TabIndex = 9;
             // 
             // AddressTextbox
             // 
-            this.AddressTextbox.Location = new System.Drawing.Point(124, 191);
+            this.AddressTextbox.Location = new System.Drawing.Point(124, 163);
             this.AddressTextbox.Name = "AddressTextbox";
             this.AddressTextbox.Size = new System.Drawing.Size(429, 23);
             this.AddressTextbox.TabIndex = 10;
             // 
             // DateTextbox
             // 
-            this.DateTextbox.Location = new System.Drawing.Point(658, 148);
+            this.DateTextbox.Location = new System.Drawing.Point(658, 128);
             this.DateTextbox.Name = "DateTextbox";
             this.DateTextbox.Size = new System.Drawing.Size(100, 23);
             this.DateTextbox.TabIndex = 12;
@@ -112,7 +113,7 @@
             // 
             this.GenderLabel3.AutoSize = true;
             this.GenderLabel3.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.GenderLabel3.Location = new System.Drawing.Point(12, 147);
+            this.GenderLabel3.Location = new System.Drawing.Point(12, 127);
             this.GenderLabel3.Name = "GenderLabel3";
             this.GenderLabel3.Size = new System.Drawing.Size(94, 24);
             this.GenderLabel3.TabIndex = 14;
@@ -122,7 +123,7 @@
             // 
             this.AgeLabel4.AutoSize = true;
             this.AgeLabel4.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AgeLabel4.Location = new System.Drawing.Point(248, 147);
+            this.AgeLabel4.Location = new System.Drawing.Point(248, 126);
             this.AgeLabel4.Name = "AgeLabel4";
             this.AgeLabel4.Size = new System.Drawing.Size(58, 24);
             this.AgeLabel4.TabIndex = 15;
@@ -132,7 +133,7 @@
             // 
             this.AddressLabel5.AutoSize = true;
             this.AddressLabel5.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AddressLabel5.Location = new System.Drawing.Point(12, 185);
+            this.AddressLabel5.Location = new System.Drawing.Point(12, 162);
             this.AddressLabel5.Name = "AddressLabel5";
             this.AddressLabel5.Size = new System.Drawing.Size(106, 24);
             this.AddressLabel5.TabIndex = 16;
@@ -142,7 +143,7 @@
             // 
             this.DateLabel6.AutoSize = true;
             this.DateLabel6.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DateLabel6.Location = new System.Drawing.Point(582, 147);
+            this.DateLabel6.Location = new System.Drawing.Point(582, 128);
             this.DateLabel6.Name = "DateLabel6";
             this.DateLabel6.Size = new System.Drawing.Size(70, 24);
             this.DateLabel6.TabIndex = 17;
@@ -180,7 +181,7 @@
             // 
             this.MotherLabel8.AutoSize = true;
             this.MotherLabel8.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MotherLabel8.Location = new System.Drawing.Point(12, 226);
+            this.MotherLabel8.Location = new System.Drawing.Point(12, 192);
             this.MotherLabel8.Name = "MotherLabel8";
             this.MotherLabel8.Size = new System.Drawing.Size(178, 24);
             this.MotherLabel8.TabIndex = 22;
@@ -188,7 +189,7 @@
             // 
             // MotherTextbox
             // 
-            this.MotherTextbox.Location = new System.Drawing.Point(196, 227);
+            this.MotherTextbox.Location = new System.Drawing.Point(196, 193);
             this.MotherTextbox.Name = "MotherTextbox";
             this.MotherTextbox.Size = new System.Drawing.Size(268, 23);
             this.MotherTextbox.TabIndex = 23;
@@ -197,7 +198,7 @@
             // 
             this.FatherLabel9.AutoSize = true;
             this.FatherLabel9.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FatherLabel9.Location = new System.Drawing.Point(12, 291);
+            this.FatherLabel9.Location = new System.Drawing.Point(12, 263);
             this.FatherLabel9.Name = "FatherLabel9";
             this.FatherLabel9.Size = new System.Drawing.Size(178, 24);
             this.FatherLabel9.TabIndex = 24;
@@ -205,7 +206,7 @@
             // 
             // MotherOccupationTextbox
             // 
-            this.MotherOccupationTextbox.Location = new System.Drawing.Point(160, 259);
+            this.MotherOccupationTextbox.Location = new System.Drawing.Point(160, 228);
             this.MotherOccupationTextbox.Name = "MotherOccupationTextbox";
             this.MotherOccupationTextbox.Size = new System.Drawing.Size(266, 23);
             this.MotherOccupationTextbox.TabIndex = 25;
@@ -214,7 +215,7 @@
             // 
             this.MotherOccupationlabel8.AutoSize = true;
             this.MotherOccupationlabel8.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MotherOccupationlabel8.Location = new System.Drawing.Point(12, 259);
+            this.MotherOccupationlabel8.Location = new System.Drawing.Point(12, 227);
             this.MotherOccupationlabel8.Name = "MotherOccupationlabel8";
             this.MotherOccupationlabel8.Size = new System.Drawing.Size(142, 24);
             this.MotherOccupationlabel8.TabIndex = 26;
@@ -222,7 +223,7 @@
             // 
             // FatherTextbox
             // 
-            this.FatherTextbox.Location = new System.Drawing.Point(196, 292);
+            this.FatherTextbox.Location = new System.Drawing.Point(196, 263);
             this.FatherTextbox.Name = "FatherTextbox";
             this.FatherTextbox.Size = new System.Drawing.Size(268, 23);
             this.FatherTextbox.TabIndex = 27;
@@ -231,7 +232,7 @@
             // 
             this.FatherOccupationLabel10.AutoSize = true;
             this.FatherOccupationLabel10.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FatherOccupationLabel10.Location = new System.Drawing.Point(12, 324);
+            this.FatherOccupationLabel10.Location = new System.Drawing.Point(12, 296);
             this.FatherOccupationLabel10.Name = "FatherOccupationLabel10";
             this.FatherOccupationLabel10.Size = new System.Drawing.Size(142, 24);
             this.FatherOccupationLabel10.TabIndex = 28;
@@ -239,7 +240,7 @@
             // 
             // FatherOccupationTextbox
             // 
-            this.FatherOccupationTextbox.Location = new System.Drawing.Point(160, 325);
+            this.FatherOccupationTextbox.Location = new System.Drawing.Point(160, 297);
             this.FatherOccupationTextbox.Name = "FatherOccupationTextbox";
             this.FatherOccupationTextbox.Size = new System.Drawing.Size(274, 23);
             this.FatherOccupationTextbox.TabIndex = 29;
@@ -258,6 +259,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(897, 450);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.FatherOccupationTextbox);
