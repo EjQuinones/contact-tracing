@@ -40,6 +40,17 @@
             this.AddressLabel5 = new System.Windows.Forms.Label();
             this.DateLabel6 = new System.Windows.Forms.Label();
             this.SubmitButton = new System.Windows.Forms.Button();
+            this.Temperaturelabel7 = new System.Windows.Forms.Label();
+            this.TemperatureTextbox = new System.Windows.Forms.TextBox();
+            this.MotherLabel8 = new System.Windows.Forms.Label();
+            this.MotherTextbox = new System.Windows.Forms.TextBox();
+            this.FatherLabel9 = new System.Windows.Forms.Label();
+            this.MotherOccupationTextbox = new System.Windows.Forms.TextBox();
+            this.MotherOccupationlabel8 = new System.Windows.Forms.Label();
+            this.FatherTextbox = new System.Windows.Forms.TextBox();
+            this.FatherOccupationLabel10 = new System.Windows.Forms.Label();
+            this.FatherOccupationTextbox = new System.Windows.Forms.TextBox();
+            this.ExitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -75,14 +86,14 @@
             // 
             // AddressTextbox
             // 
-            this.AddressTextbox.Location = new System.Drawing.Point(124, 211);
+            this.AddressTextbox.Location = new System.Drawing.Point(124, 191);
             this.AddressTextbox.Name = "AddressTextbox";
             this.AddressTextbox.Size = new System.Drawing.Size(429, 23);
             this.AddressTextbox.TabIndex = 10;
             // 
             // DateTextbox
             // 
-            this.DateTextbox.Location = new System.Drawing.Point(715, 148);
+            this.DateTextbox.Location = new System.Drawing.Point(658, 148);
             this.DateTextbox.Name = "DateTextbox";
             this.DateTextbox.Size = new System.Drawing.Size(100, 23);
             this.DateTextbox.TabIndex = 12;
@@ -121,7 +132,7 @@
             // 
             this.AddressLabel5.AutoSize = true;
             this.AddressLabel5.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AddressLabel5.Location = new System.Drawing.Point(12, 210);
+            this.AddressLabel5.Location = new System.Drawing.Point(12, 185);
             this.AddressLabel5.Name = "AddressLabel5";
             this.AddressLabel5.Size = new System.Drawing.Size(106, 24);
             this.AddressLabel5.TabIndex = 16;
@@ -131,7 +142,7 @@
             // 
             this.DateLabel6.AutoSize = true;
             this.DateLabel6.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DateLabel6.Location = new System.Drawing.Point(639, 147);
+            this.DateLabel6.Location = new System.Drawing.Point(582, 147);
             this.DateLabel6.Name = "DateLabel6";
             this.DateLabel6.Size = new System.Drawing.Size(70, 24);
             this.DateLabel6.TabIndex = 17;
@@ -139,7 +150,7 @@
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(375, 249);
+            this.SubmitButton.Location = new System.Drawing.Point(371, 393);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(141, 45);
             this.SubmitButton.TabIndex = 19;
@@ -147,11 +158,118 @@
             this.SubmitButton.UseVisualStyleBackColor = true;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
+            // Temperaturelabel7
+            // 
+            this.Temperaturelabel7.AutoSize = true;
+            this.Temperaturelabel7.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Temperaturelabel7.Location = new System.Drawing.Point(582, 191);
+            this.Temperaturelabel7.Name = "Temperaturelabel7";
+            this.Temperaturelabel7.Size = new System.Drawing.Size(154, 24);
+            this.Temperaturelabel7.TabIndex = 20;
+            this.Temperaturelabel7.Text = "Temperature:";
+            // 
+            // TemperatureTextbox
+            // 
+            this.TemperatureTextbox.Location = new System.Drawing.Point(742, 192);
+            this.TemperatureTextbox.Name = "TemperatureTextbox";
+            this.TemperatureTextbox.Size = new System.Drawing.Size(100, 23);
+            this.TemperatureTextbox.TabIndex = 21;
+            this.TemperatureTextbox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // MotherLabel8
+            // 
+            this.MotherLabel8.AutoSize = true;
+            this.MotherLabel8.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MotherLabel8.Location = new System.Drawing.Point(12, 226);
+            this.MotherLabel8.Name = "MotherLabel8";
+            this.MotherLabel8.Size = new System.Drawing.Size(178, 24);
+            this.MotherLabel8.TabIndex = 22;
+            this.MotherLabel8.Text = "Mother\'s Name:";
+            // 
+            // MotherTextbox
+            // 
+            this.MotherTextbox.Location = new System.Drawing.Point(196, 227);
+            this.MotherTextbox.Name = "MotherTextbox";
+            this.MotherTextbox.Size = new System.Drawing.Size(268, 23);
+            this.MotherTextbox.TabIndex = 23;
+            // 
+            // FatherLabel9
+            // 
+            this.FatherLabel9.AutoSize = true;
+            this.FatherLabel9.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FatherLabel9.Location = new System.Drawing.Point(12, 291);
+            this.FatherLabel9.Name = "FatherLabel9";
+            this.FatherLabel9.Size = new System.Drawing.Size(178, 24);
+            this.FatherLabel9.TabIndex = 24;
+            this.FatherLabel9.Text = "Father\'s Name:";
+            // 
+            // MotherOccupationTextbox
+            // 
+            this.MotherOccupationTextbox.Location = new System.Drawing.Point(160, 259);
+            this.MotherOccupationTextbox.Name = "MotherOccupationTextbox";
+            this.MotherOccupationTextbox.Size = new System.Drawing.Size(266, 23);
+            this.MotherOccupationTextbox.TabIndex = 25;
+            // 
+            // MotherOccupationlabel8
+            // 
+            this.MotherOccupationlabel8.AutoSize = true;
+            this.MotherOccupationlabel8.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MotherOccupationlabel8.Location = new System.Drawing.Point(12, 259);
+            this.MotherOccupationlabel8.Name = "MotherOccupationlabel8";
+            this.MotherOccupationlabel8.Size = new System.Drawing.Size(142, 24);
+            this.MotherOccupationlabel8.TabIndex = 26;
+            this.MotherOccupationlabel8.Text = "Occupation:";
+            // 
+            // FatherTextbox
+            // 
+            this.FatherTextbox.Location = new System.Drawing.Point(196, 292);
+            this.FatherTextbox.Name = "FatherTextbox";
+            this.FatherTextbox.Size = new System.Drawing.Size(268, 23);
+            this.FatherTextbox.TabIndex = 27;
+            // 
+            // FatherOccupationLabel10
+            // 
+            this.FatherOccupationLabel10.AutoSize = true;
+            this.FatherOccupationLabel10.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FatherOccupationLabel10.Location = new System.Drawing.Point(12, 324);
+            this.FatherOccupationLabel10.Name = "FatherOccupationLabel10";
+            this.FatherOccupationLabel10.Size = new System.Drawing.Size(142, 24);
+            this.FatherOccupationLabel10.TabIndex = 28;
+            this.FatherOccupationLabel10.Text = "Occupation:";
+            // 
+            // FatherOccupationTextbox
+            // 
+            this.FatherOccupationTextbox.Location = new System.Drawing.Point(160, 325);
+            this.FatherOccupationTextbox.Name = "FatherOccupationTextbox";
+            this.FatherOccupationTextbox.Size = new System.Drawing.Size(274, 23);
+            this.FatherOccupationTextbox.TabIndex = 29;
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.Location = new System.Drawing.Point(810, 415);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(75, 23);
+            this.ExitButton.TabIndex = 30;
+            this.ExitButton.Text = "Exit";
+            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 306);
+            this.ClientSize = new System.Drawing.Size(897, 450);
+            this.Controls.Add(this.ExitButton);
+            this.Controls.Add(this.FatherOccupationTextbox);
+            this.Controls.Add(this.FatherOccupationLabel10);
+            this.Controls.Add(this.FatherTextbox);
+            this.Controls.Add(this.MotherOccupationlabel8);
+            this.Controls.Add(this.MotherOccupationTextbox);
+            this.Controls.Add(this.FatherLabel9);
+            this.Controls.Add(this.MotherTextbox);
+            this.Controls.Add(this.MotherLabel8);
+            this.Controls.Add(this.TemperatureTextbox);
+            this.Controls.Add(this.Temperaturelabel7);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.DateLabel6);
             this.Controls.Add(this.AddressLabel5);
@@ -184,5 +302,16 @@
         private Label AddressLabel5;
         private Label DateLabel6;
         private Button SubmitButton;
+        private Label Temperaturelabel7;
+        private TextBox TemperatureTextbox;
+        private Label MotherLabel8;
+        private TextBox MotherTextbox;
+        private Label FatherLabel9;
+        private TextBox MotherOccupationTextbox;
+        private Label MotherOccupationlabel8;
+        private TextBox FatherTextbox;
+        private Label FatherOccupationLabel10;
+        private TextBox FatherOccupationTextbox;
+        private Button ExitButton;
     }
 }

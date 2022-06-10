@@ -19,7 +19,22 @@ namespace Quinones_contract_tracing
                 file.WriteLine("Your Age :" + AgeTextbox.Text);
                 file.WriteLine("Your Address :" + AddressTextbox.Text);
                 file.WriteLine("Date today :" + DateTextbox.Text);
+                file.WriteLine("Temperature :" + TemperatureTextbox.Text);
+                file.WriteLine("Mother's Name :" + MotherTextbox.Text);
+                file.WriteLine("Mother's Occupation :" + MotherOccupationTextbox.Text);
+                file.WriteLine("Father's Name :" + FatherTextbox.Text);
+                file.WriteLine("Father's Occupation :" + FatherOccupationTextbox.Text);
                 file.Close(); 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();        
         }
     }
 }
