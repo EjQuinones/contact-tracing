@@ -28,70 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.NameButton1 = new System.Windows.Forms.Button();
-            this.AgeButton2 = new System.Windows.Forms.Button();
-            this.AddressButton = new System.Windows.Forms.Button();
-            this.GenderButton = new System.Windows.Forms.Button();
-            this.DateButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.TemperatureButton = new System.Windows.Forms.Button();
             this.NameTextbox = new System.Windows.Forms.TextBox();
             this.GenderTextbox = new System.Windows.Forms.TextBox();
             this.AgeTextbox = new System.Windows.Forms.TextBox();
             this.AddressTextbox = new System.Windows.Forms.TextBox();
             this.TemperatureTextbox = new System.Windows.Forms.TextBox();
             this.DateTextbox = new System.Windows.Forms.TextBox();
+            this.NameLabel2 = new System.Windows.Forms.Label();
+            this.GenderLabel3 = new System.Windows.Forms.Label();
+            this.AgeLabel4 = new System.Windows.Forms.Label();
+            this.AddressLabel5 = new System.Windows.Forms.Label();
+            this.DateLabel6 = new System.Windows.Forms.Label();
+            this.TempLabel7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // NameButton1
-            // 
-            this.NameButton1.Location = new System.Drawing.Point(12, 82);
-            this.NameButton1.Name = "NameButton1";
-            this.NameButton1.Size = new System.Drawing.Size(75, 39);
-            this.NameButton1.TabIndex = 0;
-            this.NameButton1.Text = "Name";
-            this.NameButton1.UseVisualStyleBackColor = true;
-            this.NameButton1.Click += new System.EventHandler(this.Namebutton_Click);
-            // 
-            // AgeButton2
-            // 
-            this.AgeButton2.Location = new System.Drawing.Point(211, 138);
-            this.AgeButton2.Name = "AgeButton2";
-            this.AgeButton2.Size = new System.Drawing.Size(75, 41);
-            this.AgeButton2.TabIndex = 1;
-            this.AgeButton2.Text = "Age";
-            this.AgeButton2.UseVisualStyleBackColor = true;
-            this.AgeButton2.Click += new System.EventHandler(this.AgeButton2_Click);
-            // 
-            // AddressButton
-            // 
-            this.AddressButton.Location = new System.Drawing.Point(12, 198);
-            this.AddressButton.Name = "AddressButton";
-            this.AddressButton.Size = new System.Drawing.Size(75, 44);
-            this.AddressButton.TabIndex = 2;
-            this.AddressButton.Text = " Address";
-            this.AddressButton.UseVisualStyleBackColor = true;
-            this.AddressButton.Click += new System.EventHandler(this.AddressButton_Click);
-            // 
-            // GenderButton
-            // 
-            this.GenderButton.Location = new System.Drawing.Point(12, 138);
-            this.GenderButton.Name = "GenderButton";
-            this.GenderButton.Size = new System.Drawing.Size(75, 41);
-            this.GenderButton.TabIndex = 3;
-            this.GenderButton.Text = "Gender";
-            this.GenderButton.UseVisualStyleBackColor = true;
-            this.GenderButton.Click += new System.EventHandler(this.GenderButton_Click);
-            // 
-            // DateButton
-            // 
-            this.DateButton.Location = new System.Drawing.Point(616, 138);
-            this.DateButton.Name = "DateButton";
-            this.DateButton.Size = new System.Drawing.Size(75, 41);
-            this.DateButton.TabIndex = 4;
-            this.DateButton.Text = "Date";
-            this.DateButton.UseVisualStyleBackColor = true;
-            this.DateButton.Click += new System.EventHandler(this.DateButton_Click);
             // 
             // label1
             // 
@@ -103,75 +53,126 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Contract - Tracing";
             // 
-            // TemperatureButton
-            // 
-            this.TemperatureButton.Location = new System.Drawing.Point(616, 198);
-            this.TemperatureButton.Name = "TemperatureButton";
-            this.TemperatureButton.Size = new System.Drawing.Size(86, 44);
-            this.TemperatureButton.TabIndex = 6;
-            this.TemperatureButton.Text = "Temperature";
-            this.TemperatureButton.UseVisualStyleBackColor = true;
-            // 
             // NameTextbox
             // 
-            this.NameTextbox.Location = new System.Drawing.Point(93, 91);
+            this.NameTextbox.Location = new System.Drawing.Point(88, 91);
             this.NameTextbox.Name = "NameTextbox";
             this.NameTextbox.Size = new System.Drawing.Size(334, 23);
             this.NameTextbox.TabIndex = 7;
             // 
             // GenderTextbox
             // 
-            this.GenderTextbox.Location = new System.Drawing.Point(93, 148);
+            this.GenderTextbox.Location = new System.Drawing.Point(112, 148);
             this.GenderTextbox.Name = "GenderTextbox";
             this.GenderTextbox.Size = new System.Drawing.Size(100, 23);
             this.GenderTextbox.TabIndex = 8;
             // 
             // AgeTextbox
             // 
-            this.AgeTextbox.Location = new System.Drawing.Point(292, 148);
+            this.AgeTextbox.Location = new System.Drawing.Point(312, 148);
             this.AgeTextbox.Name = "AgeTextbox";
             this.AgeTextbox.Size = new System.Drawing.Size(100, 23);
             this.AgeTextbox.TabIndex = 9;
             // 
             // AddressTextbox
             // 
-            this.AddressTextbox.Location = new System.Drawing.Point(93, 210);
+            this.AddressTextbox.Location = new System.Drawing.Point(124, 211);
             this.AddressTextbox.Name = "AddressTextbox";
             this.AddressTextbox.Size = new System.Drawing.Size(429, 23);
             this.AddressTextbox.TabIndex = 10;
             // 
             // TemperatureTextbox
             // 
-            this.TemperatureTextbox.Location = new System.Drawing.Point(708, 210);
+            this.TemperatureTextbox.Location = new System.Drawing.Point(751, 211);
             this.TemperatureTextbox.Name = "TemperatureTextbox";
             this.TemperatureTextbox.Size = new System.Drawing.Size(111, 23);
             this.TemperatureTextbox.TabIndex = 11;
             // 
             // DateTextbox
             // 
-            this.DateTextbox.Location = new System.Drawing.Point(697, 148);
+            this.DateTextbox.Location = new System.Drawing.Point(667, 148);
             this.DateTextbox.Name = "DateTextbox";
             this.DateTextbox.Size = new System.Drawing.Size(100, 23);
             this.DateTextbox.TabIndex = 12;
+            // 
+            // NameLabel2
+            // 
+            this.NameLabel2.AutoSize = true;
+            this.NameLabel2.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NameLabel2.Location = new System.Drawing.Point(12, 90);
+            this.NameLabel2.Name = "NameLabel2";
+            this.NameLabel2.Size = new System.Drawing.Size(70, 24);
+            this.NameLabel2.TabIndex = 13;
+            this.NameLabel2.Text = "Name:";
+            // 
+            // GenderLabel3
+            // 
+            this.GenderLabel3.AutoSize = true;
+            this.GenderLabel3.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.GenderLabel3.Location = new System.Drawing.Point(12, 147);
+            this.GenderLabel3.Name = "GenderLabel3";
+            this.GenderLabel3.Size = new System.Drawing.Size(94, 24);
+            this.GenderLabel3.TabIndex = 14;
+            this.GenderLabel3.Text = "Gender:";
+            // 
+            // AgeLabel4
+            // 
+            this.AgeLabel4.AutoSize = true;
+            this.AgeLabel4.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AgeLabel4.Location = new System.Drawing.Point(248, 147);
+            this.AgeLabel4.Name = "AgeLabel4";
+            this.AgeLabel4.Size = new System.Drawing.Size(58, 24);
+            this.AgeLabel4.TabIndex = 15;
+            this.AgeLabel4.Text = "Age:";
+            // 
+            // AddressLabel5
+            // 
+            this.AddressLabel5.AutoSize = true;
+            this.AddressLabel5.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AddressLabel5.Location = new System.Drawing.Point(12, 210);
+            this.AddressLabel5.Name = "AddressLabel5";
+            this.AddressLabel5.Size = new System.Drawing.Size(106, 24);
+            this.AddressLabel5.TabIndex = 16;
+            this.AddressLabel5.Text = "Address:";
+            // 
+            // DateLabel6
+            // 
+            this.DateLabel6.AutoSize = true;
+            this.DateLabel6.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DateLabel6.Location = new System.Drawing.Point(591, 147);
+            this.DateLabel6.Name = "DateLabel6";
+            this.DateLabel6.Size = new System.Drawing.Size(70, 24);
+            this.DateLabel6.TabIndex = 17;
+            this.DateLabel6.Text = "Date:";
+            // 
+            // TempLabel7
+            // 
+            this.TempLabel7.AutoSize = true;
+            this.TempLabel7.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TempLabel7.Location = new System.Drawing.Point(591, 210);
+            this.TempLabel7.Name = "TempLabel7";
+            this.TempLabel7.Size = new System.Drawing.Size(154, 24);
+            this.TempLabel7.TabIndex = 18;
+            this.TempLabel7.Text = "Temperature:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 457);
+            this.ClientSize = new System.Drawing.Size(897, 306);
+            this.Controls.Add(this.TempLabel7);
+            this.Controls.Add(this.DateLabel6);
+            this.Controls.Add(this.AddressLabel5);
+            this.Controls.Add(this.AgeLabel4);
+            this.Controls.Add(this.GenderLabel3);
+            this.Controls.Add(this.NameLabel2);
             this.Controls.Add(this.DateTextbox);
             this.Controls.Add(this.TemperatureTextbox);
             this.Controls.Add(this.AddressTextbox);
             this.Controls.Add(this.AgeTextbox);
             this.Controls.Add(this.GenderTextbox);
             this.Controls.Add(this.NameTextbox);
-            this.Controls.Add(this.TemperatureButton);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.DateButton);
-            this.Controls.Add(this.GenderButton);
-            this.Controls.Add(this.AddressButton);
-            this.Controls.Add(this.AgeButton2);
-            this.Controls.Add(this.NameButton1);
             this.Name = "Form1";
             this.Text = "Contract_Tracing ";
             this.ResumeLayout(false);
@@ -180,19 +181,18 @@
         }
 
         #endregion
-
-        private Button NameButton1;
-        private Button AgeButton2;
-        private Button AddressButton;
-        private Button GenderButton;
-        private Button DateButton;
         private Label label1;
-        private Button TemperatureButton;
         private TextBox NameTextbox;
         private TextBox GenderTextbox;
         private TextBox AgeTextbox;
         private TextBox AddressTextbox;
         private TextBox TemperatureTextbox;
         private TextBox DateTextbox;
+        private Label NameLabel2;
+        private Label GenderLabel3;
+        private Label AgeLabel4;
+        private Label AddressLabel5;
+        private Label DateLabel6;
+        private Label TempLabel7;
     }
 }
