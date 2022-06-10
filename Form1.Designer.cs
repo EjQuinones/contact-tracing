@@ -33,14 +33,13 @@
             this.GenderTextbox = new System.Windows.Forms.TextBox();
             this.AgeTextbox = new System.Windows.Forms.TextBox();
             this.AddressTextbox = new System.Windows.Forms.TextBox();
-            this.TemperatureTextbox = new System.Windows.Forms.TextBox();
             this.DateTextbox = new System.Windows.Forms.TextBox();
             this.NameLabel2 = new System.Windows.Forms.Label();
             this.GenderLabel3 = new System.Windows.Forms.Label();
             this.AgeLabel4 = new System.Windows.Forms.Label();
             this.AddressLabel5 = new System.Windows.Forms.Label();
             this.DateLabel6 = new System.Windows.Forms.Label();
-            this.TempLabel7 = new System.Windows.Forms.Label();
+            this.SubmitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -81,16 +80,9 @@
             this.AddressTextbox.Size = new System.Drawing.Size(429, 23);
             this.AddressTextbox.TabIndex = 10;
             // 
-            // TemperatureTextbox
-            // 
-            this.TemperatureTextbox.Location = new System.Drawing.Point(751, 211);
-            this.TemperatureTextbox.Name = "TemperatureTextbox";
-            this.TemperatureTextbox.Size = new System.Drawing.Size(111, 23);
-            this.TemperatureTextbox.TabIndex = 11;
-            // 
             // DateTextbox
             // 
-            this.DateTextbox.Location = new System.Drawing.Point(667, 148);
+            this.DateTextbox.Location = new System.Drawing.Point(715, 148);
             this.DateTextbox.Name = "DateTextbox";
             this.DateTextbox.Size = new System.Drawing.Size(100, 23);
             this.DateTextbox.TabIndex = 12;
@@ -139,35 +131,34 @@
             // 
             this.DateLabel6.AutoSize = true;
             this.DateLabel6.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DateLabel6.Location = new System.Drawing.Point(591, 147);
+            this.DateLabel6.Location = new System.Drawing.Point(639, 147);
             this.DateLabel6.Name = "DateLabel6";
             this.DateLabel6.Size = new System.Drawing.Size(70, 24);
             this.DateLabel6.TabIndex = 17;
             this.DateLabel6.Text = "Date:";
             // 
-            // TempLabel7
+            // SubmitButton
             // 
-            this.TempLabel7.AutoSize = true;
-            this.TempLabel7.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TempLabel7.Location = new System.Drawing.Point(591, 210);
-            this.TempLabel7.Name = "TempLabel7";
-            this.TempLabel7.Size = new System.Drawing.Size(154, 24);
-            this.TempLabel7.TabIndex = 18;
-            this.TempLabel7.Text = "Temperature:";
+            this.SubmitButton.Location = new System.Drawing.Point(375, 249);
+            this.SubmitButton.Name = "SubmitButton";
+            this.SubmitButton.Size = new System.Drawing.Size(141, 45);
+            this.SubmitButton.TabIndex = 19;
+            this.SubmitButton.Text = "Submit";
+            this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 306);
-            this.Controls.Add(this.TempLabel7);
+            this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.DateLabel6);
             this.Controls.Add(this.AddressLabel5);
             this.Controls.Add(this.AgeLabel4);
             this.Controls.Add(this.GenderLabel3);
             this.Controls.Add(this.NameLabel2);
             this.Controls.Add(this.DateTextbox);
-            this.Controls.Add(this.TemperatureTextbox);
             this.Controls.Add(this.AddressTextbox);
             this.Controls.Add(this.AgeTextbox);
             this.Controls.Add(this.GenderTextbox);
@@ -186,13 +177,12 @@
         private TextBox GenderTextbox;
         private TextBox AgeTextbox;
         private TextBox AddressTextbox;
-        private TextBox TemperatureTextbox;
         private TextBox DateTextbox;
         private Label NameLabel2;
         private Label GenderLabel3;
         private Label AgeLabel4;
         private Label AddressLabel5;
         private Label DateLabel6;
-        private Label TempLabel7;
+        private Button SubmitButton;
     }
 }
