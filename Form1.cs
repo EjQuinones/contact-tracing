@@ -11,7 +11,8 @@ namespace Quinones_contract_tracing
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-
+            year2022();
+            year2023();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -29,7 +30,6 @@ namespace Quinones_contract_tracing
             StreamReader sr = new StreamReader(@"C:\Users\Ej Quinones\Desktop\TRACING - APP DEMO\Contact Tracing Demo.txt");
             Responded.Text = sr.ReadToEnd();
         }
-
         private void year2022()
         {
             StreamWriter file = new StreamWriter(@"C:\Users\Ej Quinones\Desktop\TRACING - APP DEMO\2022\Contact Tracing Demo.txt");
