@@ -52,6 +52,7 @@
             this.FatherOccupationLabel10 = new System.Windows.Forms.Label();
             this.FatherOccupationTextbox = new System.Windows.Forms.TextBox();
             this.ExitButton = new System.Windows.Forms.Button();
+            this.Record = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -255,12 +256,22 @@
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+            // Record
+            // 
+            this.Record.FormattingEnabled = true;
+            this.Record.ItemHeight = 15;
+            this.Record.Location = new System.Drawing.Point(742, 9);
+            this.Record.Name = "Record";
+            this.Record.Size = new System.Drawing.Size(143, 64);
+            this.Record.TabIndex = 31;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(897, 450);
+            this.Controls.Add(this.Record);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.FatherOccupationTextbox);
             this.Controls.Add(this.FatherOccupationLabel10);
@@ -315,5 +326,6 @@
         private Label FatherOccupationLabel10;
         private TextBox FatherOccupationTextbox;
         private Button ExitButton;
+        private ListBox Record;
     }
 }

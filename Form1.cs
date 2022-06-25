@@ -24,7 +24,13 @@ namespace Quinones_contract_tracing
                 file.WriteLine("Mother's Occupation :" + MotherOccupationTextbox.Text);
                 file.WriteLine("Father's Name :" + FatherTextbox.Text);
                 file.WriteLine("Father's Occupation :" + FatherOccupationTextbox.Text);
-                file.Close(); 
+                file.Close();
+
+            StreamReader sr = new StreamReader(@"C:\Users\Ej Quinones\Desktop\TRACING - APP DEMO\Contact Tracing Demo.txt");
+            Record.Items.Add(sr.ReadLine());
+            string line = sr.ReadLine();
+            MessageBox.Show("Record");
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
