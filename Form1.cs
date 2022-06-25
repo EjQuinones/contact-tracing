@@ -11,8 +11,10 @@ namespace Quinones_contract_tracing
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            year2022();
-            year2023();
+            if (DateTextbox.Text == "2022")
+                year2022();
+            else if (DateTextbox.Text == "2023")
+                year2023();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -27,8 +29,7 @@ namespace Quinones_contract_tracing
 
         private void Respondbutton_Click(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader(@"C:\Users\Ej Quinones\Desktop\TRACING - APP DEMO\Contact Tracing Demo.txt");
-            Responded.Text = sr.ReadToEnd();
+           
         }
         private void year2022()
         {
@@ -48,7 +49,7 @@ namespace Quinones_contract_tracing
         }
         private void year2023()
         {
-            StreamWriter file = new StreamWriter(@"C:\Users\Ej Quinones\Desktop\TRACING - APP DEMO\2022\Contact Tracing Demo.txt");
+            StreamWriter file = new StreamWriter(@"C:\Users\Ej Quinones\Desktop\TRACING - APP DEMO\2023\Contact Tracing Demo.txt");
             file.Write("");
             file.WriteLine("Your Name :" + NameTextbox.Text);
             file.WriteLine("Your Gender :" + GenderTextbox.Text);
@@ -61,9 +62,18 @@ namespace Quinones_contract_tracing
             file.WriteLine("Father's Name :" + FatherTextbox.Text);
             file.WriteLine("Father's Occupation :" + FatherOccupationTextbox.Text);
             file.Close();
-            }
-        }    
-        
+        }
+        private void Readyear2022()
+        {
+            StreamReader sr = new StreamReader(@"C:\Users\Ej Quinones\Desktop\TRACING - APP DEMO\2022\Contact Tracing Demo.txt");
+            Responded.Text = sr.ReadToEnd();
+        }
+        private void Readyear2023()
+        {    
+            StreamReader sr = new StreamReader(@"C:\Users\Ej Quinones\Desktop\2023\TRACING - APP DEMO\2023\Contact Tracing Demo.txt");
+            Responded.Text = sr.ReadToEnd();
+        }
     }
+} 
 
     
