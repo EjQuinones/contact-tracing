@@ -52,7 +52,8 @@
             this.FatherOccupationLabel10 = new System.Windows.Forms.Label();
             this.FatherOccupationTextbox = new System.Windows.Forms.TextBox();
             this.ExitButton = new System.Windows.Forms.Button();
-            this.Record = new System.Windows.Forms.ListBox();
+            this.Responded = new System.Windows.Forms.RichTextBox();
+            this.Respondbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -256,14 +257,23 @@
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // Record
+            // Responded
             // 
-            this.Record.FormattingEnabled = true;
-            this.Record.ItemHeight = 15;
-            this.Record.Location = new System.Drawing.Point(742, 9);
-            this.Record.Name = "Record";
-            this.Record.Size = new System.Drawing.Size(143, 64);
-            this.Record.TabIndex = 31;
+            this.Responded.Location = new System.Drawing.Point(616, 227);
+            this.Responded.Name = "Responded";
+            this.Responded.Size = new System.Drawing.Size(269, 163);
+            this.Responded.TabIndex = 32;
+            this.Responded.Text = "";
+            // 
+            // Respondbutton
+            // 
+            this.Respondbutton.Location = new System.Drawing.Point(12, 9);
+            this.Respondbutton.Name = "Respondbutton";
+            this.Respondbutton.Size = new System.Drawing.Size(94, 30);
+            this.Respondbutton.TabIndex = 33;
+            this.Respondbutton.Text = "Record";
+            this.Respondbutton.UseVisualStyleBackColor = true;
+            this.Respondbutton.Click += new System.EventHandler(this.Respondbutton_Click);
             // 
             // Form1
             // 
@@ -271,7 +281,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(897, 450);
-            this.Controls.Add(this.Record);
+            this.Controls.Add(this.Respondbutton);
+            this.Controls.Add(this.Responded);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.FatherOccupationTextbox);
             this.Controls.Add(this.FatherOccupationLabel10);
@@ -326,6 +337,7 @@
         private Label FatherOccupationLabel10;
         private TextBox FatherOccupationTextbox;
         private Button ExitButton;
-        private ListBox Record;
+        private RichTextBox Responded;
+        private Button Respondbutton;
     }
 }

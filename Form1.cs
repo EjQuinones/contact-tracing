@@ -25,12 +25,7 @@ namespace Quinones_contract_tracing
                 file.WriteLine("Father's Name :" + FatherTextbox.Text);
                 file.WriteLine("Father's Occupation :" + FatherOccupationTextbox.Text);
                 file.Close();
-
-            StreamReader sr = new StreamReader(@"C:\Users\Ej Quinones\Desktop\TRACING - APP DEMO\Contact Tracing Demo.txt");
-            Record.Items.Add(sr.ReadLine());
-            string line = sr.ReadLine();
-            MessageBox.Show("Record");
-
+           
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -41,6 +36,12 @@ namespace Quinones_contract_tracing
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();        
+        }
+
+        private void Respondbutton_Click(object sender, EventArgs e)
+        {
+            StreamReader sr = new StreamReader(@"C:\Users\Ej Quinones\Desktop\TRACING - APP DEMO\Contact Tracing Demo.txt");
+            Responded.Text = sr.ReadToEnd();
         }
     }
 }
