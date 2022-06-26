@@ -34,7 +34,7 @@
             this.GenderTextbox = new System.Windows.Forms.TextBox();
             this.AgeTextbox = new System.Windows.Forms.TextBox();
             this.AddressTextbox = new System.Windows.Forms.TextBox();
-            this.DateTextbox = new System.Windows.Forms.TextBox();
+            this.monthTextBox = new System.Windows.Forms.TextBox();
             this.NameLabel2 = new System.Windows.Forms.Label();
             this.GenderLabel3 = new System.Windows.Forms.Label();
             this.AgeLabel4 = new System.Windows.Forms.Label();
@@ -54,6 +54,8 @@
             this.ExitButton = new System.Windows.Forms.Button();
             this.Responded = new System.Windows.Forms.RichTextBox();
             this.Respondbutton = new System.Windows.Forms.Button();
+            this.dayTextBox = new System.Windows.Forms.TextBox();
+            this.yearTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -72,6 +74,7 @@
             this.NameTextbox.Name = "NameTextbox";
             this.NameTextbox.Size = new System.Drawing.Size(334, 23);
             this.NameTextbox.TabIndex = 7;
+            this.NameTextbox.TextChanged += new System.EventHandler(this.NameTextbox_TextChanged);
             // 
             // GenderTextbox
             // 
@@ -94,12 +97,13 @@
             this.AddressTextbox.Size = new System.Drawing.Size(429, 23);
             this.AddressTextbox.TabIndex = 10;
             // 
-            // DateTextbox
+            // monthTextBox
             // 
-            this.DateTextbox.Location = new System.Drawing.Point(658, 128);
-            this.DateTextbox.Name = "DateTextbox";
-            this.DateTextbox.Size = new System.Drawing.Size(100, 23);
-            this.DateTextbox.TabIndex = 12;
+            this.monthTextBox.Location = new System.Drawing.Point(658, 129);
+            this.monthTextBox.Name = "monthTextBox";
+            this.monthTextBox.Size = new System.Drawing.Size(18, 23);
+            this.monthTextBox.TabIndex = 12;
+            this.monthTextBox.TextChanged += new System.EventHandler(this.DateTextbox_TextChanged);
             // 
             // NameLabel2
             // 
@@ -145,7 +149,7 @@
             // 
             this.DateLabel6.AutoSize = true;
             this.DateLabel6.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DateLabel6.Location = new System.Drawing.Point(582, 128);
+            this.DateLabel6.Location = new System.Drawing.Point(582, 129);
             this.DateLabel6.Name = "DateLabel6";
             this.DateLabel6.Size = new System.Drawing.Size(70, 24);
             this.DateLabel6.TabIndex = 17;
@@ -259,7 +263,7 @@
             // 
             // Responded
             // 
-            this.Responded.Location = new System.Drawing.Point(616, 227);
+            this.Responded.Location = new System.Drawing.Point(552, 221);
             this.Responded.Name = "Responded";
             this.Responded.Size = new System.Drawing.Size(269, 163);
             this.Responded.TabIndex = 32;
@@ -275,12 +279,28 @@
             this.Respondbutton.UseVisualStyleBackColor = true;
             this.Respondbutton.Click += new System.EventHandler(this.Respondbutton_Click);
             // 
+            // dayTextBox
+            // 
+            this.dayTextBox.Location = new System.Drawing.Point(682, 128);
+            this.dayTextBox.Name = "dayTextBox";
+            this.dayTextBox.Size = new System.Drawing.Size(19, 23);
+            this.dayTextBox.TabIndex = 34;
+            // 
+            // yearTextBox
+            // 
+            this.yearTextBox.Location = new System.Drawing.Point(707, 128);
+            this.yearTextBox.Name = "yearTextBox";
+            this.yearTextBox.Size = new System.Drawing.Size(54, 23);
+            this.yearTextBox.TabIndex = 35;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(897, 450);
+            this.Controls.Add(this.yearTextBox);
+            this.Controls.Add(this.dayTextBox);
             this.Controls.Add(this.Respondbutton);
             this.Controls.Add(this.Responded);
             this.Controls.Add(this.ExitButton);
@@ -300,7 +320,7 @@
             this.Controls.Add(this.AgeLabel4);
             this.Controls.Add(this.GenderLabel3);
             this.Controls.Add(this.NameLabel2);
-            this.Controls.Add(this.DateTextbox);
+            this.Controls.Add(this.monthTextBox);
             this.Controls.Add(this.AddressTextbox);
             this.Controls.Add(this.AgeTextbox);
             this.Controls.Add(this.GenderTextbox);
@@ -319,7 +339,7 @@
         private TextBox GenderTextbox;
         private TextBox AgeTextbox;
         private TextBox AddressTextbox;
-        private TextBox DateTextbox;
+        private TextBox monthTextBox;
         private Label NameLabel2;
         private Label GenderLabel3;
         private Label AgeLabel4;
@@ -339,5 +359,7 @@
         private Button ExitButton;
         private RichTextBox Responded;
         private Button Respondbutton;
+        private TextBox dayTextBox;
+        private TextBox yearTextBox;
     }
 }
