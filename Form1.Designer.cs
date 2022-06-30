@@ -60,6 +60,7 @@
             this.qrTextBox1 = new System.Windows.Forms.TextBox();
             this.createButton1 = new System.Windows.Forms.Button();
             this.qrPictureBox1 = new System.Windows.Forms.PictureBox();
+            this.deviceComboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.qrPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -303,7 +304,7 @@
             // 
             this.qrLabel2.AutoSize = true;
             this.qrLabel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.qrLabel2.Location = new System.Drawing.Point(754, 41);
+            this.qrLabel2.Location = new System.Drawing.Point(589, 41);
             this.qrLabel2.Name = "qrLabel2";
             this.qrLabel2.Size = new System.Drawing.Size(82, 25);
             this.qrLabel2.TabIndex = 36;
@@ -311,7 +312,7 @@
             // 
             // qrTextBox1
             // 
-            this.qrTextBox1.Location = new System.Drawing.Point(673, 296);
+            this.qrTextBox1.Location = new System.Drawing.Point(664, 335);
             this.qrTextBox1.Multiline = true;
             this.qrTextBox1.Name = "qrTextBox1";
             this.qrTextBox1.Size = new System.Drawing.Size(255, 65);
@@ -319,7 +320,7 @@
             // 
             // createButton1
             // 
-            this.createButton1.Location = new System.Drawing.Point(873, 367);
+            this.createButton1.Location = new System.Drawing.Point(873, 415);
             this.createButton1.Name = "createButton1";
             this.createButton1.Size = new System.Drawing.Size(75, 23);
             this.createButton1.TabIndex = 39;
@@ -330,12 +331,20 @@
             // qrPictureBox1
             // 
             this.qrPictureBox1.BackColor = System.Drawing.Color.White;
-            this.qrPictureBox1.Location = new System.Drawing.Point(636, 69);
+            this.qrPictureBox1.Location = new System.Drawing.Point(621, 108);
             this.qrPictureBox1.Name = "qrPictureBox1";
             this.qrPictureBox1.Size = new System.Drawing.Size(312, 221);
             this.qrPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.qrPictureBox1.TabIndex = 40;
             this.qrPictureBox1.TabStop = false;
+            // 
+            // deviceComboBox1
+            // 
+            this.deviceComboBox1.FormattingEnabled = true;
+            this.deviceComboBox1.Location = new System.Drawing.Point(798, 79);
+            this.deviceComboBox1.Name = "deviceComboBox1";
+            this.deviceComboBox1.Size = new System.Drawing.Size(121, 23);
+            this.deviceComboBox1.TabIndex = 41;
             // 
             // Form1
             // 
@@ -343,6 +352,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(960, 569);
+            this.Controls.Add(this.deviceComboBox1);
             this.Controls.Add(this.qrPictureBox1);
             this.Controls.Add(this.createButton1);
             this.Controls.Add(this.qrTextBox1);
@@ -376,6 +386,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Contract_Tracing ";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.qrPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -414,5 +425,6 @@
         private TextBox qrTextBox1;
         private Button createButton1;
         private PictureBox qrPictureBox1;
+        private ComboBox deviceComboBox1;
     }
 }

@@ -1,5 +1,7 @@
 using OpenXmlPowerTools;
 using QRCoder;
+using AForge.Video;
+using AForge.Video.DirectShow;
 
 namespace Quinones_contract_tracing
 {
@@ -11,6 +13,8 @@ namespace Quinones_contract_tracing
         {
             InitializeComponent();
         }
+        FilterInfoCollection filterInfocollection;
+        VideoCaptureDevice videoCaptureDevice;
         private void SubmitButton_Click(object sender, EventArgs e)
         {
             if (yearTextBox.Text == "2022")
@@ -102,6 +106,17 @@ namespace Quinones_contract_tracing
             QRCodeData data = qr.CreateQrCode(qrTextBox1.Text, QRCodeGenerator.ECCLevel.Q);
             QRCode code = new QRCode(data);
             qrPictureBox1.Image = code.GetGraphic(5);
+
+            CaptureDevice = new VideoCaptureDevice(filterInfocollection[deviceComboBox1.SelectedIndex].MonikerString);
+            CaptureDevice.Start();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            filterInfocollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo filterInfo in filterInfocollection) ;
+            deviceComboBox1.Items.Add(filterInfo.Name);
+            deviceComboBox1.SelectedIndex = 0;
         }
     }
 } 
