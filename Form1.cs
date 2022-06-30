@@ -1,7 +1,12 @@
+using OpenXmlPowerTools;
+using QRCoder;
+
 namespace Quinones_contract_tracing
 {
     public partial class Form1 : Form
     {
+        public object QrCodeGenerator { get; private set; }
+
         public Form1()
         {
             InitializeComponent();
@@ -33,46 +38,46 @@ namespace Quinones_contract_tracing
         }
         private void year2022()
         {
-            string nameOfText = NameTextbox.Text;
-            StreamWriter file = new StreamWriter(@"C:\Users\Ej Quinones\Desktop\TRACING - APP DEMO\2022\" + NameTextbox.Text + ".txt");
+            string nameOfText = nameTextbox.Text;
+            StreamWriter file = new StreamWriter(@"C:\Users\Ej Quinones\Desktop\TRACING - APP DEMO\2022\" + nameTextbox.Text + ".txt");
             file.Write("");
-            file.WriteLine("Your Name :" + NameTextbox.Text);
-            file.WriteLine("Your Gender :" + GenderTextbox.Text);
-            file.WriteLine("Your Age :" + AgeTextbox.Text);
-            file.WriteLine("Your Address :" + AddressTextbox.Text);
+            file.WriteLine("Your Name :" + nameTextbox.Text);
+            file.WriteLine("Your Gender :" + genderTextbox.Text);
+            file.WriteLine("Your Age :" + ageTextbox.Text);
+            file.WriteLine("Your Address :" + addressTextbox.Text);
             file.WriteLine("Date today :" + monthTextBox.Text + "/" + dayTextBox.Text + "/" + yearTextBox.Text);
-            file.WriteLine("Temperature :" + TemperatureTextbox.Text);
-            file.WriteLine("Mother's Name :" + MotherTextbox.Text);
-            file.WriteLine("Mother's Occupation :" + MotherOccupationTextbox.Text);
-            file.WriteLine("Father's Name :" + FatherTextbox.Text);
-            file.WriteLine("Father's Occupation :" + FatherOccupationTextbox.Text);
+            file.WriteLine("Temperature :" + temperatureTextbox.Text);
+            file.WriteLine("Mother's Name :" + motherTextbox.Text);
+            file.WriteLine("Mother's Occupation :" + motheroccupationTextbox.Text);
+            file.WriteLine("Father's Name :" + fatherTextbox.Text);
+            file.WriteLine("Father's Occupation :" + fatherOccupationTextbox.Text);
             file.Close();
         }
         private void year2023()
         {
-            string nameOfText = NameTextbox.Text;
-            StreamWriter file = new StreamWriter(@"C:\Users\Ej Quinones\Desktop\TRACING - APP DEMO\2023\" + NameTextbox.Text + ".txt");
+            string nameOfText = nameTextbox.Text;
+            StreamWriter file = new StreamWriter(@"C:\Users\Ej Quinones\Desktop\TRACING - APP DEMO\2023\" + nameTextbox.Text + ".txt");
             file.Write("");
-            file.WriteLine("Your Name :" + NameTextbox.Text);
-            file.WriteLine("Your Gender :" + GenderTextbox.Text);
-            file.WriteLine("Your Age :" + AgeTextbox.Text);
-            file.WriteLine("Your Address :" + AddressTextbox.Text);
+            file.WriteLine("Your Name :" + nameTextbox.Text);
+            file.WriteLine("Your Gender :" + genderTextbox.Text);
+            file.WriteLine("Your Age :" + ageTextbox.Text);
+            file.WriteLine("Your Address :" + addressTextbox.Text);
             file.WriteLine("Date today :" + monthTextBox.Text + "/" + dayTextBox.Text + "/" + yearTextBox.Text);
-            file.WriteLine("Temperature :" + TemperatureTextbox.Text);
-            file.WriteLine("Mother's Name :" + MotherTextbox.Text);
-            file.WriteLine("Mother's Occupation :" + MotherOccupationTextbox.Text);
-            file.WriteLine("Father's Name :" + FatherTextbox.Text);
-            file.WriteLine("Father's Occupation :" + FatherOccupationTextbox.Text);
+            file.WriteLine("Temperature :" + temperatureTextbox.Text);
+            file.WriteLine("Mother's Name :" + motherTextbox.Text);
+            file.WriteLine("Mother's Occupation :" + motheroccupationTextbox.Text);
+            file.WriteLine("Father's Name :" + fatherTextbox.Text);
+            file.WriteLine("Father's Occupation :" + fatherOccupationTextbox.Text);
             file.Close();
         }
         private void Readyear2022()
         {
-            StreamReader sr = new StreamReader(@"C:\Users\Ej Quinones\Desktop\TRACING - APP DEMO\2022\" + NameTextbox.Text + ".txt");
+            StreamReader sr = new StreamReader(@"C:\Users\Ej Quinones\Desktop\TRACING - APP DEMO\2022\" + nameTextbox.Text + ".txt");
             Responded.Text = sr.ReadToEnd();
         }
         private void Readyear2023()
         {
-            StreamReader sr = new StreamReader(@"C:\Users\Ej Quinones\Desktop\2023\TRACING - APP DEMO\2023\" + NameTextbox.Text + ".txt");
+            StreamReader sr = new StreamReader(@"C:\Users\Ej Quinones\Desktop\2023\TRACING - APP DEMO\2023\" + nameTextbox.Text + ".txt");
             Responded.Text = sr.ReadToEnd();
         }
 
@@ -84,6 +89,19 @@ namespace Quinones_contract_tracing
         private void NameTextbox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Temperaturelabel7_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void createButton1_Click(object sender, EventArgs e)
+        {
+
+            QRCodeGenerator qr = new QRCodeGenerator();
+            QRCodeData data = qr.CreateQrCode(qrTextBox1.Text, QRCodeGenerator.ECCLevel.Q);
+            QRCode code = new QRCode(data);
+            qrPictureBox1.Image = code.GetGraphic(5);
         }
     }
 } 
