@@ -143,10 +143,10 @@ namespace Quinones_contract_tracing
             if (qrPictureBox1.Image != null)
             {
                 ZXing.BarcodeReader barcodeReader = new ZXing.BarcodeReader();
-                Result = barcodeReader.Decode((Bitmap)qrPictureBox1.Image);
-                if (Result != null)
+                Result qrResult = barcodeReader.Decode((Bitmap)qrPictureBox1.Image);
+                if (qrResult != null)
                 {
-                    txtQRCode.Text = Result.ToString();
+                    object txtQRCode.Text = Result.ToString();
                     timer1.Stop();
                     if (videoCaptureDevice.IsRunning)
                         videoCaptureDevice.Stop();
