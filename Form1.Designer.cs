@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.nameTextbox = new System.Windows.Forms.TextBox();
@@ -61,6 +62,7 @@
             this.createButton1 = new System.Windows.Forms.Button();
             this.qrPictureBox1 = new System.Windows.Forms.PictureBox();
             this.deviceComboBox1 = new System.Windows.Forms.ComboBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.qrPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -337,6 +339,7 @@
             this.qrPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.qrPictureBox1.TabIndex = 40;
             this.qrPictureBox1.TabStop = false;
+            this.qrPictureBox1.Click += new System.EventHandler(this.qrPictureBox1_Click);
             // 
             // deviceComboBox1
             // 
@@ -345,6 +348,11 @@
             this.deviceComboBox1.Name = "deviceComboBox1";
             this.deviceComboBox1.Size = new System.Drawing.Size(121, 23);
             this.deviceComboBox1.TabIndex = 41;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -386,6 +394,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Contract_Tracing ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.qrPictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -426,5 +435,6 @@
         private Button createButton1;
         private PictureBox qrPictureBox1;
         private ComboBox deviceComboBox1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

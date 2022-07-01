@@ -2,6 +2,9 @@ using OpenXmlPowerTools;
 using QRCoder;
 using AForge.Video;
 using AForge.Video.DirectShow;
+using System.Web.Mvc;
+using FilterInfo = System.Web.Mvc.FilterInfo;
+using Jane;
 
 namespace Quinones_contract_tracing
 {
@@ -107,18 +110,51 @@ namespace Quinones_contract_tracing
             QRCode code = new QRCode(data);
             qrPictureBox1.Image = code.GetGraphic(5);
 
-            CaptureDevice = new VideoCaptureDevice(filterInfocollection[deviceComboBox1.SelectedIndex].MonikerString);
-            CaptureDevice.Start();
+            videoCaptureDevice = new VideoCaptureDevice(filterInfocollection[deviceComboBox1.SelectedIndex].MonikerString);
+            videoCaptureDevice.NewFrame += CaptureDevice_NewFrame;
+            videoCaptureDevice.Start();
+            timer1.Start();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             filterInfocollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            foreach (FilterInfo filterInfo in filterInfocollection) ;
-            deviceComboBox1.Items.Add(filterInfo.Name);
+            foreach (System.Web.Mvc.FilterInfo filterInfo in filterInfocollection);
             deviceComboBox1.SelectedIndex = 0;
         }
+        private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+        qrPictureBox1.Image =((Bitmap)eventArgs.Frame.Clone();
+        }
+        private void qrPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (videoCaptureDevice.IsRunning)
+                videoCaptureDevice.Stop();
+
+            }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (qrPictureBox1.Image != null)
+            {
+                ZXing.BarcodeReader barcodeReader = new ZXing.BarcodeReader();
+                Result = barcodeReader.Decode((Bitmap)qrPictureBox1.Image);
+                if (Result != null)
+                {
+                    txtQRCode.Text = Result.ToString();
+                    timer1.Stop();
+                    if (videoCaptureDevice.IsRunning)
+                        videoCaptureDevice.Stop();
+                }
+            }
+        }
     }
-} 
+}
+
 
     
