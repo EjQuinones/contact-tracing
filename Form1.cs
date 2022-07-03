@@ -16,8 +16,8 @@ namespace Quinones_contract_tracing
         {
             InitializeComponent();
         }
-        FilterInfoCollection filterInfocollection;
-        VideoCaptureDevice videoCaptureDevice;
+        FilterInfoCollection FilterInfoCollection;
+        VideoCaptureDevice captureDevice;
         private void SubmitButton_Click(object sender, EventArgs e)
         {
             if (yearTextBox.Text == "2022")
@@ -102,54 +102,18 @@ namespace Quinones_contract_tracing
         {
 
         }
-        private void createButton1_Click(object sender, EventArgs e)
-        {
-            QRCodeGenerator qr = new QRCodeGenerator();
-            QRCodeData data = qr.CreateQrCode(Responded.Text, QRCodeGenerator.ECCLevel.Q);
-            QRCode code = new QRCode(data);
-            qrPictureBox1.Image = code.GetGraphic(5);
 
-            videoCaptureDevice = new VideoCaptureDevice(filterInfocollection[deviceComboBox1.SelectedIndex].MonikerString);
-            videoCaptureDevice.NewFrame += CaptureDevice_NewFrame;
-            videoCaptureDevice.Start();
-            timer1.Start();
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+            FilterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach(FilterInfo filterInfo in FilterInfoCollection)
+                QrvideoComboBox1.Items.Add(filterInfo);
+            QrvideoComboBox1.SelectedIndex = 0;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void CreateButton1_Click(object sender, EventArgs e)
         {
-            filterInfocollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            foreach (System.Web.Mvc.FilterInfo filterInfo in filterInfocollection);
-            deviceComboBox1.SelectedIndex = 0;
-        }
-        private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
-        {
-            qrPictureBox1.Image = ((Bitmap)eventArgs.Frame.Clone()
-        }
-        private void qrPictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (videoCaptureDevice.IsRunning)
-                videoCaptureDevice.Stop();
-            }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (qrPictureBox1.Image != null)
-            {
-                ZXing.BarcodeReader barcodeReader = new ZXing.BarcodeReader();
-                Result qrResult = barcodeReader.Decode((Bitmap)qrPictureBox1.Image);
-                if (qrResult != null)
-                {
-                    object txtQRCode.Text = Result.ToString();
-                    timer1.Stop();
-                    if (videoCaptureDevice.IsRunning)
-                        videoCaptureDevice.Stop();
-                }
-            }
+            CreateButton1 = new VideoCaptureDevice(FilterInfoCollection[QrvideoComboBox1.SelectedIndex].MonikerString);
         }
     }
 }
