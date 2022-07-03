@@ -1,10 +1,7 @@
-using OpenXmlPowerTools;
-using QRCoder;
+
 using AForge.Video;
 using AForge.Video.DirectShow;
-using System.Web.Mvc;
-using FilterInfo = System.Web.Mvc.FilterInfo;
-using Jane;
+using ZXing;
 
 namespace Quinones_contract_tracing
 {
@@ -106,18 +103,50 @@ namespace Quinones_contract_tracing
         private void Form1_Load_1(object sender, EventArgs e)
         {
             FilterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            foreach(FilterInfo filterInfo in FilterInfoCollection)
+            foreach (FilterInfo filterInfo in FilterInfoCollection)
                 QrvideoComboBox1.Items.Add(filterInfo);
             QrvideoComboBox1.SelectedIndex = 0;
         }
 
+        private ComboBox GetQrvideoComboBox1()
+        {
+            return QrvideoComboBox1;
+        }
+
         private void CreateButton1_Click(object sender, EventArgs e)
         {
-            CreateButton1 = new VideoCaptureDevice(FilterInfoCollection[QrvideoComboBox1.SelectedIndex].MonikerString);
+            captureDevice = new VideoCaptureDevice(FilterInfoCollection[QrvideoComboBox1.SelectedIndex].MonikerString);
+            captureDevice.NewFrame += CaptureDevice_NewFrame;
+            captureDevice.Start();
+            timer1.Start();
+        }
+        private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            qrPictureBox1.Image = (Bitmap)eventArgs.Frame.Clone();
+        }
+
+        private void Form1_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            if (captureDevice.IsRunning)
+                captureDevice.Stop();
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (qrPictureBox1.Image != null)
+            {
+                BarcodeReader barcodeReader = new BarcodeReader();
+                Result result = barcodeReader.Decode((Bitmap)qrPictureBox1.Image);
+                if (result != null)
+                {
+                    QrTextBox1.Text = result.ToString();
+                    timer1.Stop();
+                    if (captureDevice.IsRunning)
+                        captureDevice.Stop();
+                }
+            }
         }
     }
 }
- 
 
 
     

@@ -394,18 +394,13 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Contract_Tracing ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing_1);
             this.Load += new System.EventHandler(this.Form1_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.qrPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         private void NewMethod()
         {
             this.qrPictureBox1.Click += new System.EventHandler(this.qrPictureBox1_Click);
