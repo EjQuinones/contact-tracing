@@ -58,11 +58,10 @@
             this.dayTextBox = new System.Windows.Forms.TextBox();
             this.yearTextBox = new System.Windows.Forms.TextBox();
             this.qrLabel2 = new System.Windows.Forms.Label();
-            this.qrTextBox1 = new System.Windows.Forms.TextBox();
             this.createButton1 = new System.Windows.Forms.Button();
             this.qrPictureBox1 = new System.Windows.Forms.PictureBox();
-            this.deviceComboBox1 = new System.Windows.Forms.ComboBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.deviceComboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.qrPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -272,9 +271,9 @@
             // 
             // Responded
             // 
-            this.Responded.Location = new System.Drawing.Point(312, 335);
+            this.Responded.Location = new System.Drawing.Point(312, 326);
             this.Responded.Name = "Responded";
-            this.Responded.Size = new System.Drawing.Size(272, 171);
+            this.Responded.Size = new System.Drawing.Size(287, 180);
             this.Responded.TabIndex = 32;
             this.Responded.Text = "";
             // 
@@ -306,19 +305,11 @@
             // 
             this.qrLabel2.AutoSize = true;
             this.qrLabel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.qrLabel2.Location = new System.Drawing.Point(589, 41);
+            this.qrLabel2.Location = new System.Drawing.Point(738, 62);
             this.qrLabel2.Name = "qrLabel2";
             this.qrLabel2.Size = new System.Drawing.Size(82, 25);
             this.qrLabel2.TabIndex = 36;
             this.qrLabel2.Text = "Qr Code";
-            // 
-            // qrTextBox1
-            // 
-            this.qrTextBox1.Location = new System.Drawing.Point(664, 335);
-            this.qrTextBox1.Multiline = true;
-            this.qrTextBox1.Name = "qrTextBox1";
-            this.qrTextBox1.Size = new System.Drawing.Size(255, 65);
-            this.qrTextBox1.TabIndex = 38;
             // 
             // createButton1
             // 
@@ -333,7 +324,7 @@
             // qrPictureBox1
             // 
             this.qrPictureBox1.BackColor = System.Drawing.Color.White;
-            this.qrPictureBox1.Location = new System.Drawing.Point(621, 108);
+            this.qrPictureBox1.Location = new System.Drawing.Point(613, 90);
             this.qrPictureBox1.Name = "qrPictureBox1";
             this.qrPictureBox1.Size = new System.Drawing.Size(312, 221);
             this.qrPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -341,18 +332,18 @@
             this.qrPictureBox1.TabStop = false;
             this.qrPictureBox1.Click += new System.EventHandler(this.qrPictureBox1_Click);
             // 
-            // deviceComboBox1
-            // 
-            this.deviceComboBox1.FormattingEnabled = true;
-            this.deviceComboBox1.Location = new System.Drawing.Point(798, 79);
-            this.deviceComboBox1.Name = "deviceComboBox1";
-            this.deviceComboBox1.Size = new System.Drawing.Size(121, 23);
-            this.deviceComboBox1.TabIndex = 41;
-            // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // deviceComboBox1
+            // 
+            this.deviceComboBox1.FormattingEnabled = true;
+            this.deviceComboBox1.Location = new System.Drawing.Point(804, 317);
+            this.deviceComboBox1.Name = "deviceComboBox1";
+            this.deviceComboBox1.Size = new System.Drawing.Size(121, 23);
+            this.deviceComboBox1.TabIndex = 41;
             // 
             // Form1
             // 
@@ -363,7 +354,6 @@
             this.Controls.Add(this.deviceComboBox1);
             this.Controls.Add(this.qrPictureBox1);
             this.Controls.Add(this.createButton1);
-            this.Controls.Add(this.qrTextBox1);
             this.Controls.Add(this.qrLabel2);
             this.Controls.Add(this.yearTextBox);
             this.Controls.Add(this.dayTextBox);
@@ -431,10 +421,9 @@
         private TextBox dayTextBox;
         private TextBox yearTextBox;
         private Label qrLabel2;
-        private TextBox qrTextBox1;
         private Button createButton1;
         private PictureBox qrPictureBox1;
-        private ComboBox deviceComboBox1;
         private System.Windows.Forms.Timer timer1;
+        private ComboBox deviceComboBox1;
     }
 }

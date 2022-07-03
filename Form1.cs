@@ -104,9 +104,8 @@ namespace Quinones_contract_tracing
         }
         private void createButton1_Click(object sender, EventArgs e)
         {
-
             QRCodeGenerator qr = new QRCodeGenerator();
-            QRCodeData data = qr.CreateQrCode(qrTextBox1.Text, QRCodeGenerator.ECCLevel.Q);
+            QRCodeData data = qr.CreateQrCode(Responded.Text, QRCodeGenerator.ECCLevel.Q);
             QRCode code = new QRCode(data);
             qrPictureBox1.Image = code.GetGraphic(5);
 
@@ -124,7 +123,7 @@ namespace Quinones_contract_tracing
         }
         private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
-        qrPictureBox1.Image =((Bitmap)eventArgs.Frame.Clone();
+            qrPictureBox1.Image = ((Bitmap)eventArgs.Frame.Clone()
         }
         private void qrPictureBox1_Click(object sender, EventArgs e)
         {
@@ -135,7 +134,6 @@ namespace Quinones_contract_tracing
         {
             if (videoCaptureDevice.IsRunning)
                 videoCaptureDevice.Stop();
-
             }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -155,6 +153,7 @@ namespace Quinones_contract_tracing
         }
     }
 }
+ 
 
 
     
