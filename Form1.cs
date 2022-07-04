@@ -7,8 +7,8 @@ namespace Quinones_contract_tracing
 {
     public partial class Form1 : Form
     {
-        public object QrCodeGenerator { get; private set; }
 
+        private BarcodeReaderGeneric barcodeReader = new BarcodeReaderGeneric(new BarcodeReader(), null, null);
         public Form1()
         {
             InitializeComponent();
@@ -134,7 +134,7 @@ namespace Quinones_contract_tracing
         {
             if (qrPictureBox1.Image != null)
             {
-                BarcodeReader barcodeReader = new BarcodeReader();
+                QRBarcodeReader barcodeReader = new QRBarcodeReader();
                 Result result = barcodeReader.Decode((Bitmap)qrPictureBox1.Image);
                 if (result != null)
                 {
